@@ -1,11 +1,12 @@
 ## webpack
 
-Using the webpack 2 to pack project (the webpack 1 is deprecated). 
+Using the webpack 2 to pack project (the webpack 1 is deprecated).
+
 If you want to learn more, you can visit the [webpack2](https://webpack.js.org/)
 
 ### 1. What's the basic configure about webpack?
 
-The basic config about webpack will not be written in this document. If you want to learn, please check the [webpack2](https://webpack.js.org/).
+The basic config about webpack will not be written in this document.
 
 ### 2. Why to use html-webpack-plugin?
 
@@ -36,7 +37,16 @@ resolve: {
 ["es2015", {"modules": false}]
 ```
 
-### 5. How to separate the development, testing and production model?
+### 5. How to config webpack-dev-server?
+
+Using the webpack-dev-server to be the develop server.
+```
+"webpack-dev-server": "^2.4.5"
+```
+
+The config/server.config.js is about the configure of the webpack-dev-server.
+
+### 6. How to separate the development, testing and production model?
 
 Before this, Using the environment variable to distinguish the development, testing and production model. 
 But it is not readable, also it is not maintainable. So, Using the separated files to maintain the model.
@@ -45,7 +55,7 @@ The config/webpack.dev.config.js is for the development model.
 The config/webpack.prod.config.js is for the production model.
 The testing model is not implemented.
 
-### 6. What's the differences about the development model and the production model?
+### 7. What's the differences about the development model and the production model?
 
 #### a. The webpack entry.
 

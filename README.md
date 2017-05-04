@@ -127,25 +127,15 @@ Watching the [yarn](https://yarnpkg.com/) for more information.
 
 ### babel
 
-Please reading the **[details](https://github.com/sym900728/react-scaffolding/blob/master/documents/BABEL.md)**.
+Please reading the **[babel](https://github.com/sym900728/react-scaffolding/blob/master/documents/BABEL.md)** document.
 
 ### webpack
 
-Please reading the **[details](https://github.com/sym900728/react-scaffolding/blob/master/documents/WEBPACK.md)**.
-
-### webpack dev server
-
-Using the webpack-dev-server to be the develop server.
-```
-"webpack-dev-server": "^2.4.5"
-```
-
-The config/server.config.js is about the configure of the webpack-dev-server.
-
+Please reading the **[webpack](https://github.com/sym900728/react-scaffolding/blob/master/documents/WEBPACK.md)** document.
 
 ### eslint
 
-Please reading the **[details](https://github.com/sym900728/react-scaffolding/blob/master/documents/ESLINT.md)**.
+Please reading the **[eslint](https://github.com/sym900728/react-scaffolding/blob/master/documents/ESLINT.md)** document.
 
 ## React Redux
 
