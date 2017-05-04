@@ -113,29 +113,11 @@ This scaffolding quotes from [React Redux Starter Kit](https://github.com/davezu
 
 Using node environment to develop react project.
 
-### npm vs yarn
+### [babel](https://github.com/sym900728/react-scaffolding/blob/master/documents/BABEL.md)
 
-Using yarn to fixed the modules' version.
+### [webpack](https://github.com/sym900728/react-scaffolding/blob/master/documents/WEBPACK.md)
 
-#### 1. What's npm?
-
-Watching the [npm](https://docs.npmjs.com/) for more information.
-
-#### 2. What's yarn?
-
-Watching the [yarn](https://yarnpkg.com/) for more information.
-
-### babel
-
-Please reading the **[babel](https://github.com/sym900728/react-scaffolding/blob/master/documents/BABEL.md)** document.
-
-### webpack
-
-Please reading the **[webpack](https://github.com/sym900728/react-scaffolding/blob/master/documents/WEBPACK.md)** document.
-
-### eslint
-
-Please reading the **[eslint](https://github.com/sym900728/react-scaffolding/blob/master/documents/ESLINT.md)** document.
+### [eslint](https://github.com/sym900728/react-scaffolding/blob/master/documents/ESLINT.md)
 
 ## React Redux
 
