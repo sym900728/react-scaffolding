@@ -98,7 +98,24 @@ Using postcss to autoprefix the css. Note: using the postcss.config.js to config
 So, it can be maintained easily.
 learn more about [postcss](https://github.com/postcss/postcss)
 
-#### 5. How to configure webpack2 tree sharking?
+#### 5. How to configure webpack2 tree shaking?
+
+learn more about [webpack2 tree shaking](https://webpack.js.org/guides/tree-shaking/)
+
+webpack config:
+```
+resolve: {
+    modules: [
+      path.join(project.basePath, 'src'),
+      'node_modules'
+    ]
+  }
+```
+.babelrc
+```
+["es2015", {"modules": false}]
+```
+
 
 #### 6. What's the differences about the development model and the production model?
 
@@ -280,10 +297,10 @@ The eslint with the react project will use these modules.
 
 It has been list in the package.json
 
-#### 1. Don't want to lint the files under some folders?
+#### 1. How to lint without the files under some folders?
 Using the .eslintignore file to not lint the files.
 
-#### 2. Don't want to use some rules, or want to close/disable some rules?
+#### 2. How to close/disable some rules?
 Using the .eslintrc file to configure rules to open or close some rules.
 
 ```
