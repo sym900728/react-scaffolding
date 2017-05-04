@@ -6,11 +6,21 @@ Using node environment to develop react project.
 
 ## npm vs yarn
 
-Watching the [npm](https://docs.npmjs.com/) and the [yarn](https://yarnpkg.com/) for more information.
+Using yarn to fixed the modules' version.
+
+### 1. What's npm?
+
+Watching the [npm](https://docs.npmjs.com/) for more information.
+
+### 2. What's yarn?
+
+Watching the [yarn](https://yarnpkg.com/) for more information.
 
 ## babel
 
 Using babel to transform js code to support browser.
+
+### 1. How to configure babel?
 
 Babel in the package.json.
 ```
@@ -53,7 +63,8 @@ configure the .babelrc.
 
 ```
 
-### babel with webpack
+### 2. How to configure babel in the webpack?
+
 ```
 webpackConfig.module.rules = [{
   test: /\.jsx?$/,
@@ -70,31 +81,22 @@ configure babel-loader within the webpack.
 Using the webpack 2 to pack project. (the webpack 1 is deprecated) 
 If you want to learn more, you can visit the [webpack2](https://webpack.js.org/)
 
-### 1. How to separate the development, testing and production model?
+### 1. What's the basic configure about webpack?
 
-Before this, Using the environment variable to distinguish the development, testing and production model. 
-But it is not readable, also it is not maintainable. So, Using the separated files to maintain the model.
+The basic config about webpack will not be written in this document. If you want to learn, please check the [webpack2](https://webpack.js.org/).
 
-The config/webpack.dev.config.js is for the development model.
-The config/webpack.prod.config.js is for the production model.
-The testing model is not implemented.
-
-### 2. What's the configure about webpack ?
-
-The basic configure about webpack will not be written in this document. If you want to learn, please check the [webpack2](https://webpack.js.org/).
-
-### 3. Why to use html-webpack-plugin ?
+### 2. Why to use html-webpack-plugin?
 
 Using html-webpack-plugin is for the html template.
 learn more about [html-webpack-plugin](https://github.com/jantimon/html-webpack-plugin)
 
-### 4. Why to use postcss ?
+### 3. Why to use postcss?
 
 Using postcss to autoprefix the css. Note: using the postcss.config.js to configure the postcss, don't write the config in the config of the webpack.
 So, it can be maintained easily.
 learn more about [postcss](https://github.com/postcss/postcss)
 
-### 5. How to configure webpack2 tree shaking?
+### 4. How to configure webpack2 tree shaking?
 
 learn more about [webpack2 tree shaking](https://webpack.js.org/guides/tree-shaking/)
 
@@ -112,6 +114,14 @@ resolve: {
 ["es2015", {"modules": false}]
 ```
 
+### 5. How to separate the development, testing and production model?
+
+Before this, Using the environment variable to distinguish the development, testing and production model. 
+But it is not readable, also it is not maintainable. So, Using the separated files to maintain the model.
+
+The config/webpack.dev.config.js is for the development model.
+The config/webpack.prod.config.js is for the production model.
+The testing model is not implemented.
 
 ### 6. What's the differences about the development model and the production model?
 
