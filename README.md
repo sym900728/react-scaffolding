@@ -1,13 +1,18 @@
 # react-scaffolding
 
-react scaffolding, react starter kit
+React scaffolding is a react starter kit. You can use the scaffolding to set up your project quickly. 
+The description about the scaffolding will be coming soon, please waiting for it patiently. Please forgive my poor english.
 
 ## Table of Contents
+1. [Description](#description)
 1. [Features](#features)
 1. [Requirements](#requirements)
 1. [Getting Started](#getting-started)
 1. [Application Structure](#application-structure)
 1. [Reference](#reference)
+
+## Description
+Check the [Description](https://github.com/sym900728/react-scaffolding/blob/master/DESCRIPTION.md)
 
 ## Features
 * [react](https://github.com/facebook/react)
