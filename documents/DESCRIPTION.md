@@ -6,13 +6,11 @@ I will list many problems that I suffered from the react project.
 
 ### node
 
-It used the node environment to develop react project.
-
-
+Using node environment to develop react project.
 
 ### npm vs yarn
 
-
+Watching the [npm](https://docs.npmjs.com/) and the [yarn](https://yarnpkg.com/) for more information.
 
 ### babel
 
@@ -35,7 +33,7 @@ Babel in the package.json.
 "babel-register": "^6.24.1",
 ```
 
-configuring the .babelrc.
+configure the .babelrc.
 ```
 {
   "presets": [
@@ -58,6 +56,17 @@ configuring the .babelrc.
 }
 
 ```
+
+#### babel with webpack
+```
+webpackConfig.module.rules = [{
+  test: /\.jsx?$/,
+  exclude: /node_modules/,
+  use: [{loader: 'babel-loader', options: {cacheDirectory: true}}]
+}]
+```
+
+configure babel-loader within the webpack.
 
 
 ### webpack
@@ -89,7 +98,7 @@ Using postcss to autoprefix the css. Note: using the postcss.config.js to config
 So, it can be maintained easily.
 learn more about [postcss](https://github.com/postcss/postcss)
 
-#### 5. How to config webpack2 tree sharking?
+#### 5. How to configure webpack2 tree sharking?
 
 #### 6. What's the differences about the development model and the production model?
 
