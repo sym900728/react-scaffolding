@@ -1,18 +1,14 @@
-# Description
+# Tools
 
-I will list many problems that I suffered from the react project.
-
-## Tools
-
-### node
+## node
 
 Using node environment to develop react project.
 
-### npm vs yarn
+## npm vs yarn
 
 Watching the [npm](https://docs.npmjs.com/) and the [yarn](https://yarnpkg.com/) for more information.
 
-### babel
+## babel
 
 Using babel to transform js code to support browser.
 
@@ -57,7 +53,7 @@ configure the .babelrc.
 
 ```
 
-#### babel with webpack
+### babel with webpack
 ```
 webpackConfig.module.rules = [{
   test: /\.jsx?$/,
@@ -69,12 +65,12 @@ webpackConfig.module.rules = [{
 configure babel-loader within the webpack.
 
 
-### webpack
+## webpack
 
 Using the webpack 2 to pack project. (the webpack 1 is deprecated) 
 If you want to learn more, you can visit the [webpack2](https://webpack.js.org/)
 
-#### 1. How to separate the development, testing and production model?
+### 1. How to separate the development, testing and production model?
 
 Before this, Using the environment variable to distinguish the development, testing and production model. 
 But it is not readable, also it is not maintainable. So, Using the separated files to maintain the model.
@@ -83,22 +79,22 @@ The config/webpack.dev.config.js is for the development model.
 The config/webpack.prod.config.js is for the production model.
 The testing model is not implemented.
 
-#### 2. What's the configure about webpack ?
+### 2. What's the configure about webpack ?
 
 The basic configure about webpack will not be written in this document. If you want to learn, please check the [webpack2](https://webpack.js.org/).
 
-#### 3. Why to use html-webpack-plugin ?
+### 3. Why to use html-webpack-plugin ?
 
 Using html-webpack-plugin is for the html template.
 learn more about [html-webpack-plugin](https://github.com/jantimon/html-webpack-plugin)
 
-#### 4. Why to use postcss ?
+### 4. Why to use postcss ?
 
 Using postcss to autoprefix the css. Note: using the postcss.config.js to configure the postcss, don't write the config in the config of the webpack.
 So, it can be maintained easily.
 learn more about [postcss](https://github.com/postcss/postcss)
 
-#### 5. How to configure webpack2 tree shaking?
+### 5. How to configure webpack2 tree shaking?
 
 learn more about [webpack2 tree shaking](https://webpack.js.org/guides/tree-shaking/)
 
@@ -117,9 +113,9 @@ resolve: {
 ```
 
 
-#### 6. What's the differences about the development model and the production model?
+### 6. What's the differences about the development model and the production model?
 
-##### a. The webpack entry.
+#### a. The webpack entry.
 
 The development model:
 
@@ -171,7 +167,7 @@ webpackConfig.entry = {
 }
 ```
 
-##### b. The webpack.DefinePlugin
+#### b. The webpack.DefinePlugin
 
 The development model:
 ```
@@ -195,7 +191,7 @@ webpackConfig.plugins.push(
 
 Using this form the [react optimize](https://facebook.github.io/react/docs/optimizing-performance.html#webpack)
 
-##### c. The webpack.optimize.UglifyJsPlugin
+#### c. The webpack.optimize.UglifyJsPlugin
 
 The production model:
 ```
@@ -215,7 +211,7 @@ webpackConfig.plugins.push(
 
 Using webpack.optimize.UglifyPlugin to reduce the js file size.
 
-##### d. The extract-text-webpack-plugin
+#### d. The extract-text-webpack-plugin
 
 The production model:
 ```
@@ -244,7 +240,7 @@ webpackConfig.plugins.push(
 
 Using extract-text-webpack-plugin to extract the css to css file.
 
-##### f. The compression-webpack-plugin
+#### f. The compression-webpack-plugin
 
 The production model:
 ```
@@ -261,7 +257,7 @@ webpackConfig.plugins.push(
 
 Using the compression-webpack-plugin to compress js files, and output .gz files.
 
-### webpack dev server
+## webpack dev server
 
 Using the webpack-dev-server to be the develop server.
 ```
@@ -271,11 +267,11 @@ Using the webpack-dev-server to be the develop server.
 The config/server.config.js is about the configure of the webpack-dev-server.
 
 
-### eslint
+## eslint
 
 If you want to learn more, you can visit the [eslint](http://eslint.org/)
 
-#### Motivation
+### 1. What's the motivation?
 
 When the project is growing up and many people develop single project, many people have many code styles, but it should be uniform. 
 Also many people have many error code.
@@ -297,10 +293,10 @@ The eslint with the react project will use these modules.
 
 It has been list in the package.json
 
-#### 1. How to lint without the files under some folders?
+### 2. How to lint without the files under some folders?
 Using the .eslintignore file to not lint the files.
 
-#### 2. How to close/disable some rules?
+### 3. How to close/disable some rules?
 Using the .eslintrc file to configure rules to open or close some rules.
 
 ```
@@ -312,17 +308,17 @@ Using the .eslintrc file to configure rules to open or close some rules.
 }
 ```
 
-#### 3. How to use eslint in the WebStorm?
+### 4. How to use eslint in the WebStorm?
 ![webstorm-eslint-config.png](https://github.com/sym900728/react-scaffolding/blob/master/documents/images/webstorm-eslint-config.png)
 
 
-## React Redux
+# React Redux
 
-### Description
+## Description
 
 
 
-## React Components
+# React Components
 
-## Optimize
+# Optimize
 
