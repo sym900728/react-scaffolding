@@ -10,11 +10,55 @@ It used the node environment to develop react project.
 
 
 
-### npm
+### npm vs yarn
 
-### yarn
+
 
 ### babel
+
+Using babel to transform js code to support browser.
+
+Babel in the package.json.
+```
+"babel-core": "^6.24.1",
+"babel-eslint": "^7.2.3",
+"babel-jest": "^19.0.0",
+"babel-loader": "^7.0.0",
+"babel-plugin-istanbul": "^4.1.3",
+"babel-plugin-lodash": "^3.2.8",
+"babel-plugin-module-resolver": "^2.7.0",
+"babel-plugin-root-import": "^5.1.0",
+"babel-plugin-transform-decorators-legacy": "^1.3.4",
+"babel-preset-es2015": "^6.24.1",
+"babel-preset-react": "^6.24.1",
+"babel-preset-stage-1": "^6.24.1",
+"babel-register": "^6.24.1",
+```
+
+configuring the .babelrc.
+```
+{
+  "presets": [
+    ["es2015", {"modules": false}],
+    "react",
+    "stage-1"
+  ],
+  "plugins": [
+    "react-hot-loader/babel",
+    "transform-decorators-legacy",
+    ["babel-plugin-root-import", [{
+      "rootPathPrefix": "~",
+      "rootPathSuffix": "src"
+    }, {
+      "rootPathPrefix": "@",
+      "rootPathSuffix": "src/routes/Admin"
+    }
+  ]]
+  ]
+}
+
+```
+
 
 ### webpack
 
@@ -36,8 +80,8 @@ The basic configure about webpack will not be written in this document. If you w
 
 #### 3. Why to use html-webpack-plugin ?
 
-Using tml-webpack-plugin is for the html template.
-learn more about [tml-webpack-plugin](https://github.com/jantimon/html-webpack-plugin)
+Using html-webpack-plugin is for the html template.
+learn more about [html-webpack-plugin](https://github.com/jantimon/html-webpack-plugin)
 
 #### 4. Why to use postcss ?
 
@@ -45,7 +89,9 @@ Using postcss to autoprefix the css. Note: using the postcss.config.js to config
 So, it can be maintained easily.
 learn more about [postcss](https://github.com/postcss/postcss)
 
-#### 5. What's the differences about the development model and the production model?
+#### 5. How to config webpack2 tree sharking?
+
+#### 6. What's the differences about the development model and the production model?
 
 ##### a. The webpack entry.
 
@@ -99,7 +145,7 @@ webpackConfig.entry = {
 }
 ```
 
-##### b. The DefinePlugin
+##### b. The webpack.DefinePlugin
 
 The development model:
 ```
@@ -123,7 +169,7 @@ webpackConfig.plugins.push(
 
 Using this form the [react optimize](https://facebook.github.io/react/docs/optimizing-performance.html#webpack)
 
-##### c. The UglifyJsPlugin
+##### c. The webpack.optimize.UglifyJsPlugin
 
 The production model:
 ```
