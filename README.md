@@ -2,7 +2,7 @@
 
 React scaffolding is a react starter kit. You can use the scaffolding to set up your project quickly.
 
-Watching the [Description](https://github.com/sym900728/react-scaffolding/blob/master/documents/DESCRIPTION.md) for more information.
+Watching the **[description](https://github.com/sym900728/react-scaffolding/blob/master/documents/DESCRIPTION.md)** for more information.
 
 Please forgive my poor english.
 

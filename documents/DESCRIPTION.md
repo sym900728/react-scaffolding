@@ -78,7 +78,7 @@ configure babel-loader within the webpack.
 
 ## webpack
 
-Please reading the [details](https://github.com/sym900728/react-scaffolding/blob/master/documents/WEBPACK.md)
+Please reading the **[details](https://github.com/sym900728/react-scaffolding/blob/master/documents/WEBPACK.md)**
 
 ## webpack dev server
 
