@@ -18,6 +18,17 @@ It used the node environment to develop react project.
 
 ### webpack
 
+Using the webpack 2 to bundle project.
+
+
+### webpack dev server
+
+Using the webpack-dev-server to be the develop server
+```
+"webpack-dev-server": "^2.4.5"
+```
+
+
 ### eslint
 
 When the project is growing up and many people develop single project, many people have many code styles, but it should be uniform. 

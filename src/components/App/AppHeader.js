@@ -212,7 +212,7 @@ export default class AppHeader extends React.Component {
     return (
       <Navbar.Header>
         <Navbar.Brand>
-          <a onClick={this.goToAdminHome}>爱奇尔后台</a>
+          <a onClick={this.goToAdminHome}>后台</a>
         </Navbar.Brand>
         <Navbar.Toggle />
       </Navbar.Header>
