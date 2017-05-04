@@ -31,7 +31,7 @@ After confirming that your development environment meets [requirements](#require
 First, clone the project:
 
 ```bash
-$ git clone http://dev.aiqier.org/git/root/jimai-react.git <my-project-name>
+$ git https://github.com/sym900728/react-scaffolding.git <my-project-name>
 $ cd <my-project-name>
 ```
 
