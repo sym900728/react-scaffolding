@@ -56,7 +56,7 @@ Using the .eslintrc file to configure rules to open or close some rules.
 ```
 
 #### 3. How to use eslint in the WebStorm?
-![webstorm-eslint-config.png](https://github.com/sym900728/LockPattern/blob/master/documents/images/webstorm-eslint-config.png)
+![webstorm-eslint-config.png](https://github.com/sym900728/react-scaffolding/blob/master/documents/images/webstorm-eslint-config.png)
 
 
 
