@@ -1,0 +1,19 @@
+{
+  "presets": [
+    ["es2015", {"modules": false}],
+    "react",
+    "stage-1"
+  ],
+  "plugins": [
+    "react-hot-loader/babel",
+    "transform-decorators-legacy",
+    ["babel-plugin-root-import", [{
+      "rootPathPrefix": "~",
+      "rootPathSuffix": "src"
+    }, {
+      "rootPathPrefix": "@",
+      "rootPathSuffix": "src/routes/Admin"
+    }
+  ]]
+  ]
+}

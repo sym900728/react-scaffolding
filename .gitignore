@@ -1,0 +1,11 @@
+/node_modules
+bundle.js
+npm-debug.log
+/.idea
+/src/.tmp
+*.DS_Store
+/build
+/.nyc_output
+/coverage
+/dist
+yarn-error.log
