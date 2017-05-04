@@ -1,21 +1,3 @@
-# Ⅰ. Tools
-
-## node
-
-Using node environment to develop react project.
-
-## npm vs yarn
-
-Using yarn to fixed the modules' version.
-
-### 1. What's npm?
-
-Watching the [npm](https://docs.npmjs.com/) for more information.
-
-### 2. What's yarn?
-
-Watching the [yarn](https://yarnpkg.com/) for more information.
-
 ## babel
 
 Using babel to transform js code to support browser.
@@ -74,33 +56,3 @@ webpackConfig.module.rules = [{
 ```
 
 configure babel-loader within the webpack.
-
-
-## webpack
-
-Please reading the **[details](https://github.com/sym900728/react-scaffolding/blob/master/documents/WEBPACK.md)**
-
-## webpack dev server
-
-Using the webpack-dev-server to be the develop server.
-```
-"webpack-dev-server": "^2.4.5"
-```
-
-The config/server.config.js is about the configure of the webpack-dev-server.
-
-
-## eslint
-
-Please reading the **[details](https://github.com/sym900728/react-scaffolding/blob/master/documents/ESLINT.md)**
-
-# Ⅱ. React Redux
-
-## Description
-
-
-
-# Ⅲ. React Components
-
-# Ⅳ. Optimizing
-

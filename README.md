@@ -2,7 +2,7 @@
 
 React scaffolding is a react starter kit. You can use the scaffolding to set up your project quickly.
 
-Watching the **[description](https://github.com/sym900728/react-scaffolding/blob/master/documents/DESCRIPTION.md)** for more information.
+Watching the **[description](#description)** for more information.
 
 Please forgive my poor english.
 
@@ -103,3 +103,58 @@ While developing, you will probably rely mostly on `yarn start`; however, there 
 ## Reference
 
 This scaffolding quotes from [React Redux Starter Kit](https://github.com/davezuko/react-redux-starter-kit)
+
+
+# Description
+
+## Tools
+
+### node
+
+Using node environment to develop react project.
+
+### npm vs yarn
+
+Using yarn to fixed the modules' version.
+
+#### 1. What's npm?
+
+Watching the [npm](https://docs.npmjs.com/) for more information.
+
+#### 2. What's yarn?
+
+Watching the [yarn](https://yarnpkg.com/) for more information.
+
+### babel
+
+Please reading the **[details](https://github.com/sym900728/react-scaffolding/blob/master/documents/BABEL.md)**.
+
+### webpack
+
+Please reading the **[details](https://github.com/sym900728/react-scaffolding/blob/master/documents/WEBPACK.md)**.
+
+### webpack dev server
+
+Using the webpack-dev-server to be the develop server.
+```
+"webpack-dev-server": "^2.4.5"
+```
+
+The config/server.config.js is about the configure of the webpack-dev-server.
+
+
+### eslint
+
+Please reading the **[details](https://github.com/sym900728/react-scaffolding/blob/master/documents/ESLINT.md)**.
+
+## React Redux
+
+### Description
+
+
+
+## React Components
+
+## Optimizing
+
+
