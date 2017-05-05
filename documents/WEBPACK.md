@@ -4,22 +4,39 @@ Using the webpack 2 to pack project (the webpack 1 is deprecated).
 
 If you want to learn more, you can visit the [webpack2](https://webpack.js.org/)
 
+As below, listing many questions that I suffered from the react project.
+
 ### 1. What's the basic configure about webpack?
 
 The basic config about webpack will not be written in this document.
 
-### 2. Why to use html-webpack-plugin?
+### 2. How to config webpack-dev-server, why to use?
+
+Using the webpack-dev-server to be the develop server.
+```
+"webpack-dev-server": "^2.4.5"
+```
+
+The config/server.config.js is about the configure of the webpack-dev-server.
+
+Before webpack-dev-server, I used the express as the development sever. it's so hard to configure.
+
+So choosing the webpack-dev-server as the development server.
+
+### 3. What's html-webpack-plugin, how to use, why to use?
 
 Using html-webpack-plugin is for the html template.
 learn more about [html-webpack-plugin](https://github.com/jantimon/html-webpack-plugin)
 
-### 3. Why to use postcss?
+The webpack output the vendor.js, app.js will inject into the index.html.
+
+### 4. What's postcss, how to use, why to use?
 
 Using postcss to autoprefix the css. Note: using the postcss.config.js to configure the postcss, don't write the config in the config of the webpack.
 So, it can be maintained easily.
 learn more about [postcss](https://github.com/postcss/postcss)
 
-### 4. How to configure webpack2 tree shaking?
+### 5. What's webpack2 tree shaking, how to use, why to use?
 
 learn more about [webpack2 tree shaking](https://webpack.js.org/guides/tree-shaking/)
 
@@ -37,103 +54,39 @@ resolve: {
 ["es2015", {"modules": false}]
 ```
 
-### 5. How to config webpack-dev-server?
+### 6. What's compression-webpack-plugin, how to use, why to use in production model?
 
-Using the webpack-dev-server to be the develop server.
-```
-"webpack-dev-server": "^2.4.5"
-```
-
-The config/server.config.js is about the configure of the webpack-dev-server.
-
-### 6. How to separate the development, testing and production model?
-
-Before this, Using the environment variable to distinguish the development, testing and production model. 
-But it is not readable, also it is not maintainable. So, Using the separated files to maintain the model.
-
-The config/webpack.dev.config.js is for the development model.
-The config/webpack.prod.config.js is for the production model.
-The testing model is not implemented.
-
-### 7. What's the differences about the development model and the production model?
-
-#### a. The webpack entry.
-
-The development model:
-
-```
-webpackConfig.entry = {
-  app: [
-    'react-hot-loader/patch',
-    'webpack-dev-server/client?http://localhost:' + project.serverPort,
-    'webpack/hot/only-dev-server',
-    './index.js'
-  ],
-  vendor: [
-    'babel-polyfill',
-    'react',
-    'react-dom',
-    'react-router',
-    'react-redux',
-    'react-bootstrap',
-    'redux',
-    'redux-thunk',
-    'axios',
-    'lodash',
-    'immutable',
-    'moment'
-  ]
-}
-```
-
-Using react-hot-loader for the HMR.
-
-The production model:
-```
-webpackConfig.entry = {
-  app: ['./index.js'],
-  vendor: [
-    'babel-polyfill',
-    'react',
-    'react-dom',
-    'react-router',
-    'react-bootstrap',
-    'react-redux',
-    'redux',
-    'redux-thunk',
-    'axios',
-    'lodash',
-    'immutable',
-    'moment'
-  ]
-}
-```
-
-#### b. The webpack.DefinePlugin
-
-The development model:
+In the config/webpack.prod.config.js
 ```
 webpackConfig.plugins.push(
-  new webpack.DefinePlugin({
-    __DEV__: true,
-    'process.env.NODE_ENV': JSON.stringify('development')
+  new CompressionPlugin({
+    asset: '[path].gz[query]',
+    algorithm: 'gzip',
+    test: /\.js$|\.css$|\.html$/,
+    threshold: 10240,
+    minRatio: 0.8
   })
 )
 ```
 
-The production model:
+The usage of the [compression-webpack-plugin](https://github.com/webpack-contrib/compression-webpack-plugin).
+If you use the nginx server. please set as below:
 ```
-webpackConfig.plugins.push(
-  new webpack.DefinePlugin({
-    __DEV__: false,
-    'process.env.NODE_ENV': JSON.stringify('production')
-  })
-)
+gzip_static  on;
 ```
 
-Using this form the [react optimize](https://facebook.github.io/react/docs/optimizing-performance.html#webpack)
+Using the static gzip, not using the dynamic gzip. Because the dynamic gzip will cost cpu performance.
 
-#### c. The webpack.optimize.UglifyJsPlugin
+When user visit your website for the first time and their browsers do not have cache.
+The server will send js files to user's browser. Because of the sizes of js files is so huge.
+
+So it needs more time to transfer the files. The user will wait for your website for long time.
+
+So we need compress the js files to reduce the sizes of the js files.
+
+If you have a more effective way to compress the js files. please add it to the issues.
+
+### 7. What's webpack.optimize.UglifyJsPlugin, how to use it, why to use it?
 
 The production model:
 ```
@@ -153,7 +106,7 @@ webpackConfig.plugins.push(
 
 Using webpack.optimize.UglifyPlugin to reduce the js file size.
 
-#### d. The extract-text-webpack-plugin
+### 8. What's extract-text-webpack-plugin, how to use, why to use?
 
 The production model:
 ```
@@ -182,19 +135,66 @@ webpackConfig.plugins.push(
 
 Using extract-text-webpack-plugin to extract the css to css file.
 
-#### f. The compression-webpack-plugin
+### 9. What's webpack.DefinePlugin, how to use, why to use?
 
-The production model:
+The development model:
 ```
 webpackConfig.plugins.push(
-  new CompressionPlugin({
-    asset: '[path].gz[query]',
-    algorithm: 'gzip',
-    test: /\.js$|\.css$|\.html$/,
-    threshold: 10240,
-    minRatio: 0.8
+  new webpack.DefinePlugin({
+    __DEV__: true,
+    'process.env.NODE_ENV': JSON.stringify('development')
   })
 )
 ```
 
-Using the compression-webpack-plugin to compress js files, and output .gz files.
+The production model:
+```
+webpackConfig.plugins.push(
+  new webpack.DefinePlugin({
+    __DEV__: false,
+    'process.env.NODE_ENV': JSON.stringify('production')
+  })
+)
+```
+
+Using this form the [react optimize](https://facebook.github.io/react/docs/optimizing-performance.html#webpack)
+
+### 10. What's react-hot-loader, how to use, why to use?
+
+The development model:
+
+```
+webpackConfig.entry = {
+  app: [
+    'react-hot-loader/patch',
+    'webpack-dev-server/client?http://localhost:' + project.serverPort,
+    'webpack/hot/only-dev-server',
+    './index.js'
+  ],
+  vendor: [
+    'babel-polyfill',
+    'react',
+    'react-dom',
+    'react-router',
+    'react-redux',
+    'react-bootstrap',
+    'redux',
+    'redux-thunk',
+    'axios',
+    'lodash',
+    'immutable',
+    'moment'
+  ]
+}
+```
+
+Using the react-hot-loader to HMR.
+
+### 11. How to separate the development, testing and production model?
+
+Before this, Using the environment variable to distinguish the development, testing and production model. 
+But it is not readable, also it is not maintainable. So, Using the separated files to maintain the model.
+
+The config/webpack.dev.config.js is for the development model.
+The config/webpack.prod.config.js is for the production model.
+The testing model is not implemented.
