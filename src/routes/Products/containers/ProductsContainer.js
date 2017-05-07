@@ -1,26 +1,16 @@
 import React from 'react'
-import { bindActionCreators } from 'redux'
-import { connect } from 'react-redux'
+import { renderRoutes } from 'react-router-config'
 
 /**
  * Products Container
  */
-class ProductsContainer extends React.Component {
+export default class ProductsContainer extends React.Component {
   render () {
+    console.log('=== Products Container ===')
     return (
-      <div>
-        {this.props.children}
+      <div style={{marginTop: '70px'}}>
+        {renderRoutes(this.props.route.routes)}
       </div>
     )
   }
 }
-
-const mapStateToProps = (state) => {
-  return state
-}
-
-const mapDispatchToProps = (dispatch) => ({
-  actions: bindActionCreators({}, dispatch)
-})
-
-export default connect(mapStateToProps, mapDispatchToProps)(ProductsContainer)

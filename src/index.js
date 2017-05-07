@@ -2,10 +2,12 @@ import React from 'react'
 import ReactDOM from 'react-dom'
 import { Provider } from 'react-redux'
 import { AppContainer } from 'react-hot-loader'
-import { Router, browserHistory } from 'react-router'
+// import { Router, browserHistory } from 'react-router'
 import createStore from './store/createStore'
+import { ConnectedRouter } from 'react-router-redux'
+import { renderRoutes } from 'react-router-config'
 
-const store = createStore()
+const {store, history} = createStore()
 store.asyncReducers = {}
 
 const render = () => {
@@ -14,7 +16,10 @@ const render = () => {
   ReactDOM.render(
     <AppContainer>
       <Provider store={store}>
-        <Router onUpdate={() => window.scrollTo(0, 0)} history={browserHistory} routes={routes} />
+        {/*<Router onUpdate={() => window.scrollTo(0, 0)} history={browserHistory} routes={routes} />*/}
+        <ConnectedRouter history={history}>
+          {renderRoutes(routes)}
+        </ConnectedRouter>
       </Provider>
     </AppContainer>
   , document.getElementById('root')

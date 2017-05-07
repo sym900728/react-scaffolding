@@ -40,15 +40,15 @@ export default class AppHeader extends React.Component {
   }
 
   goToProductGather () {
-    this.props.router.push('/products/gather')
+    this.props.history.push('/products/gather')
   }
 
   goToProductRepository () {
-    this.props.router.push('/products/repository')
+    this.props.history.push('/auth')
   }
 
   goToProductListing () {
-    this.props.router.push('/products/listing')
+    this.props.history.push('/products')
   }
 
   goToProductManagement () {
@@ -116,7 +116,7 @@ export default class AppHeader extends React.Component {
     this.props.router.push('/configs/products/wish')
   }
   active () {
-    let route = this.props.router.location.pathname
+    // let route = this.props.router.location.pathname
     let isGatherActive = false
     let isRepositoryActive = false
     let isListingActive = false
@@ -125,46 +125,46 @@ export default class AppHeader extends React.Component {
     let isConfigsActive = false
     let isSystemActive = false
 
-    if (route.indexOf('/products/gather') >= 0) {
-      isGatherActive = true
-    } else {
-      isGatherActive = false
-    }
-
-    if (route.indexOf('/products/repository') >= 0) {
-      isRepositoryActive = true
-    } else {
-      isRepositoryActive = false
-    }
-
-    if (route.indexOf('/products/listing') >= 0) {
-      isListingActive = true
-    } else {
-      isListingActive = false
-    }
-
-    if (route.indexOf('/products/management') >= 0) {
-      isManagementActive = true
-    } else {
-      isManagementActive = false
-    }
-
-    if (route.indexOf('/shops/authorization') >= 0) {
-      isShopAuthActive = true
-    } else {
-      isShopAuthActive = false
-    }
-
-    if (route.indexOf('/configs/') >= 0) {
-      isConfigsActive = true
-    } else {
-      isConfigsActive = false
-    }
-    if (route.indexOf('/systems/') >= 0) {
-      isSystemActive = true
-    } else {
-      isSystemActive = false
-    }
+    // if (route.indexOf('/products/gather') >= 0) {
+    //   isGatherActive = true
+    // } else {
+    //   isGatherActive = false
+    // }
+    //
+    // if (route.indexOf('/products/repository') >= 0) {
+    //   isRepositoryActive = true
+    // } else {
+    //   isRepositoryActive = false
+    // }
+    //
+    // if (route.indexOf('/products/listing') >= 0) {
+    //   isListingActive = true
+    // } else {
+    //   isListingActive = false
+    // }
+    //
+    // if (route.indexOf('/products/management') >= 0) {
+    //   isManagementActive = true
+    // } else {
+    //   isManagementActive = false
+    // }
+    //
+    // if (route.indexOf('/shops/authorization') >= 0) {
+    //   isShopAuthActive = true
+    // } else {
+    //   isShopAuthActive = false
+    // }
+    //
+    // if (route.indexOf('/configs/') >= 0) {
+    //   isConfigsActive = true
+    // } else {
+    //   isConfigsActive = false
+    // }
+    // if (route.indexOf('/systems/') >= 0) {
+    //   isSystemActive = true
+    // } else {
+    //   isSystemActive = false
+    // }
     return {
       isGatherActive, isRepositoryActive, isListingActive,
       isManagementActive, isShopAuthActive, isConfigsActive,

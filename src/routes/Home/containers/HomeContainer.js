@@ -6,13 +6,11 @@ import { connect } from 'react-redux'
  * Home Container
  */
 class HomeContainer extends React.Component {
-  componentWillMount () {
-    this.props.router.replace('/products')
-  }
-
   render () {
     return (
-      <div />
+      <div style={{marginTop: '70px'}}>
+        <h1>================= Home =================</h1>
+      </div>
     )
   }
 }

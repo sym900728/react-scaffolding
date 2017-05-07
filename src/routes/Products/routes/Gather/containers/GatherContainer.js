@@ -74,6 +74,7 @@ class GatherContainer extends React.Component {
 
   render () {
     let { products, total, isFetching, isGathering } = this.props.products.gather.data
+    console.log(this.props)
     return (
       <div className='container theme-showcase'>
         <LoadingModal show={isFetching || isGathering} />
