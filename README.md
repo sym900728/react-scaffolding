@@ -11,6 +11,28 @@ Taking a view about the scaffolding.
 
 ![home.png](https://github.com/sym900728/react-scaffolding/blob/master/documents/images/home.png)
 
+## Description
+
+Describing the ecosystem of react project. Listing many problems of react project and resolving these problems.
+
+### node
+
+Using node environment to develop react project.
+
+### [babel](https://github.com/sym900728/react-scaffolding/blob/master/documents/Babel.md)
+
+### [webpack](https://github.com/sym900728/react-scaffolding/blob/master/documents/Webpack.md)
+
+### [eslint](https://github.com/sym900728/react-scaffolding/blob/master/documents/Eslint.md)
+
+### [react router v3 and v4](https://github.com/sym900728/react-scaffolding/blob/master/documents/ReactRouterV3V4.md)
+
+### [redux](https://github.com/sym900728/react-scaffolding/blob/master/documents/Redux.md)
+
+### [redux saga](https://github.com/sym900728/react-scaffolding/blob/master/documents/ReduxSaga.md)
+
+### [mobx](https://github.com/sym900728/react-scaffolding/blob/master/documents/Mobx.md)
+
 
 ## Table of Contents
 1. [Features](#features)
@@ -103,24 +125,3 @@ While developing, you will probably rely mostly on `yarn start`; however, there 
 ## Reference
 
 This scaffolding quotes from [React Redux Starter Kit](https://github.com/davezuko/react-redux-starter-kit)
-
-
-## Description
-
-Describing the ecosystem of react project. Listing many problems of react project and resolving these problems.
-
-### node
-
-Using node environment to develop react project.
-
-### [babel](https://github.com/sym900728/react-scaffolding/blob/master/documents/Babel.md)
-
-### [webpack](https://github.com/sym900728/react-scaffolding/blob/master/documents/Webpack.md)
-
-### [eslint](https://github.com/sym900728/react-scaffolding/blob/master/documents/Eslint.md)
-
-### [react router v3 and v4](https://github.com/sym900728/react-scaffolding/blob/master/documents/ReactRouterV3V4.md)
-
-### [redux](https://github.com/sym900728/react-scaffolding/blob/master/documents/Redux.md)
-
-### [mobx](https://github.com/sym900728/react-scaffolding/blob/master/documents/Mobx.md)

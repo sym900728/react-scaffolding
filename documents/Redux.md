@@ -1,7 +1,7 @@
 ## redux
 
-### What's redux?
+### 1. What's redux?
 
 
-### What's redux-thunk, How to use, Why to use?
+### 2. What's redux-thunk, How to use, Why to use?
 
