@@ -113,11 +113,11 @@ This scaffolding quotes from [React Redux Starter Kit](https://github.com/davezu
 
 Using node environment to develop react project.
 
-### [babel](https://github.com/sym900728/react-scaffolding/blob/master/documents/BABEL.md)
+### [babel](https://github.com/sym900728/react-scaffolding/blob/master/documents/Babel.md)
 
-### [webpack](https://github.com/sym900728/react-scaffolding/blob/master/documents/WEBPACK.md)
+### [webpack](https://github.com/sym900728/react-scaffolding/blob/master/documents/Webpack.md)
 
-### [eslint](https://github.com/sym900728/react-scaffolding/blob/master/documents/ESLINT.md)
+### [eslint](https://github.com/sym900728/react-scaffolding/blob/master/documents/Eslint.md)
 
 ## React Redux
 
