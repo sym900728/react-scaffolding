@@ -105,9 +105,9 @@ While developing, you will probably rely mostly on `yarn start`; however, there 
 This scaffolding quotes from [React Redux Starter Kit](https://github.com/davezuko/react-redux-starter-kit)
 
 
-# Description
+## Description
 
-## Tools
+Listing many problems of react project.
 
 ### node
 
@@ -119,14 +119,10 @@ Using node environment to develop react project.
 
 ### [eslint](https://github.com/sym900728/react-scaffolding/blob/master/documents/Eslint.md)
 
-## React Redux
+### react router v3
 
-### Description
+### react router v4
 
+### redux
 
-
-## React Components
-
-## Optimizing
-
-
+### mobx
