@@ -107,7 +107,7 @@ This scaffolding quotes from [React Redux Starter Kit](https://github.com/davezu
 
 ## Description
 
-Listing many problems of react project.
+Describing the ecosystem of react project. Listing many problems of react project and resolving these problems.
 
 ### node
 
@@ -119,10 +119,8 @@ Using node environment to develop react project.
 
 ### [eslint](https://github.com/sym900728/react-scaffolding/blob/master/documents/Eslint.md)
 
-### react router v3
+### [react router v3 and v4](https://github.com/sym900728/react-scaffolding/blob/master/documents/ReactRouterV3V4.md)
 
-### react router v4
+### [redux](https://github.com/sym900728/react-scaffolding/blob/master/documents/Redux.md)
 
-### redux
-
-### mobx
+### [mobx](https://github.com/sym900728/react-scaffolding/blob/master/documents/Mobx.md)
