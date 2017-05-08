@@ -2,7 +2,7 @@
 
 React scaffolding is a react starter kit. You can use the scaffolding to set up your project quickly.
 
-Watching the **[description](#description)** for more information.
+Watching the **[description]** for more information.
 
 Please forgive my poor english.
 
@@ -35,19 +35,10 @@ Using node environment to develop react project.
 
 
 ## Table of Contents
-1. [Features](#features)
 1. [Requirements](#requirements)
 1. [Getting Started](#getting-started)
 1. [Application Structure](#application-structure)
 1. [Reference](#reference)
-
-## Features
-* [react](https://github.com/facebook/react)
-* [redux](https://github.com/rackt/redux)
-* [react-router](https://github.com/rackt/react-router)
-* [webpack2](https://webpack.js.org)
-* [babel](https://github.com/babel/babel)
-* [eslint](https://eslint.org)
 
 ## Requirements
 
